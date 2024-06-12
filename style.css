@@ -350,6 +350,18 @@ nav .fa-solid {
     .header-text h1{
         font-size: 30px;
     }
+    .header-text{
+        margin-top: 70%;
+        font-size: 26px;
+        color:#fff
+    }
+    
+    .header-text h1{
+        font-size: 30px;
+    }
+    .header-text h1 span{
+        color:#eaed1f
+    }
     nav .fa-solid {
         display: block;
         font-size: 25px;
