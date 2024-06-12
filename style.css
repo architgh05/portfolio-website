@@ -222,6 +222,25 @@ nav ul li a:hover::after{
     font-size: 14px;
     transition: height 0.5s;
 }
+.layer .links {
+    display: flex;
+    gap: 20px; /* Adjust the gap between links as needed */
+    margin-top: 20px; /* Apply the margin-top to the container */
+}
+
+.layer .links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 24px; /* Adjust font size as needed */
+    width: 60px; /* Width of the link container */
+    height: 60px; /* Height of the link container */
+    border-radius: 50%;
+    background: #fff;
+    text-align: center;
+}
 .layer h3{
     font-weight: 500;
     margin-bottom: 20px;
