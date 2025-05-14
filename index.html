@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <script src="https://kit.fontawesome.com/a0f7613ea2.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -31,208 +31,365 @@
     </div>
 </div>
 <!------------------about-->
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="image.jpg">
-            </div>
-            <div class="about-col-2">
-                <h1 class = "sub-title">About Me</h1>
-                <p>I am currently pursuing a B.Tech in Computer Science and Engineering. I am well versed with Data Structures and Algorithms in C++, Object Oriented Programming and Frontend Development. I have Elementary exposure in Machine Learning and wish to continue learning even further.
-                    <br>
-                    My experiences with various clubs of our university have equipped me with strong analytical and communication skills. Attention to detail and delivering within timelines is something I have learnt here as well.
-                    <br>
-                    I am currently exploring opportunities to leverage my learnings, gain deeper insights in the field of Machine Learning.
-                </p>
-                <div class="tab-titles">
-                    <p class = "tab-links active-link" onclick="opentab('certification')">Certifications </p>
-                    <p class = "tab-links" onclick="opentab('experience')">Experience </p>
-                    <p class = "tab-links" onclick="opentab('education')">Education </p>
-                </div>
-                <div class="tab-contents active-tab" id = "certification">
-                    <ul>
-                        <li><span>Tensorflow and Keras Deep Learning Bootcamp</span><br>Udemy<a href="https://www.udemy.com/certificate/UC-fdc8d917-e8af-4d54-9a30-4b7022bb716b/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
-                        <li><span>Strategy and Game Theory for Management</span><br>IIM Ahmedabad-Coursera<a href="https://coursera.org/share/ee1bf4ad4a3b42470517890ff1fde118"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
-                        <li><span>Business Analytics for Decision Making</span><br>University of Colorado-Coursera<a href="https://coursera.org/share/7701511f091970c6721388d61a469e54"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
-                        <li><span>Data Structures and Algorithms</span><br>Coding Ninjas<a href="https://certificate.codingninjas.com/view/08e6664753cdeb48"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
-                        <li><span>C++</span><br>Coding Ningas<a href="https://certificate.codingninjas.com/view/20987d9cbc5ddbe4"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
-                        <li><span>Digital Marketing</span><br>linkedin<a href="https://www.linkedin.com/learning/certificates/4aa3ab0d9418fe2807d70f9830a3f4c1bece08a15f4b33950402fba2ae18a9e4"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
-                        <li><span>C</span><br>Linkedin<a href="https://www.linkedin.com/learning/certificates/c0142029b65a454f8a6eed7572bb530e9d00fca27acfe58d050771e18c094ba7"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id = "experience">
-                    <ul>
-                        <li><span>Impetus</span><br>AI/ML Intern</li>
-                        <li><span>KALLIOPE</span><br>Social Media Team Lead</li>
-                        <li><span>E Labs</span><br>Member - AI/ML Team</li>
-                    </ul>
-                </div>
-                <div class="tab-contents" id = "education">
-                    <ul>
-                        <li><span>2022-Present</span><br>KIIT Bbsr, BTech - CSE</li>
-                        <li><span>2022</span><br>Class XII - Science, 85.6%</li>
-                        <li><span>2020</span><br>Class X - Science, 93.2%</li>
-                    </ul>
-                </div>
-                
-            </div>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Me - Vertical Tabs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #0d0d0d;
+      color: #ccc;
+    }
+
+    #about {
+      padding: 80px 0;
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      gap: 40px;
+    }
+
+    .about-left {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 15px;
+    }
+
+    .about-left img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .tab-buttons {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .tab-buttons button {
+      background: none;
+      border: none;
+      color: #bbb;
+      text-align: left;
+      padding: 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border-left: 4px solid transparent;
+      transition: 0.3s;
+    }
+
+    .tab-buttons button:hover,
+    .tab-buttons button.active {
+      color: #fff;
+      border-left: 4px solid #ff004f;
+      background: #222;
+    }
+
+    .about-right {
+      width: 70%;
+      background: #1a1a1a;
+      border-radius: 15px;
+      padding: 40px;
+      position: relative;
+    }
+
+    .about-right h1 {
+      font-size: 40px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .tab-content ul {
+      list-style: none;
+    }
+
+    .tab-content ul li {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .tab-content ul li span {
+      color: #ff004f;
+      font-weight: 600;
+    }
+
+    .tab-content ul li i {
+      color: #fff;
+      margin-left: 10px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media screen and (max-width: 768px) {
+      #about {
+        flex-direction: column;
+        padding: 40px 20px;
+      }
+
+      .about-left, .about-right {
+        width: 100%;
+      }
+
+      .tab-buttons {
+        flex-direction: row;
+        overflow-x: auto;
+      }
+
+      .tab-buttons button {
+        flex: 1;
+        text-align: center;
+        border-left: none;
+        border-bottom: 2px solid transparent;
+      }
+
+      .tab-buttons button.active {
+        border-bottom: 2px solid #ff004f;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section id="about">
+  <div class="about-left">
+    <img src="image.jpg" alt="Profile Picture">
+    <div class="tab-buttons">
+      <button class="active" onclick="showTab('bio', this)">About Me</button>
+      <button onclick="showTab('certifications', this)">Certifications</button>
+      <button onclick="showTab('experience', this)">Experience</button>
+      <button onclick="showTab('education', this)">Education</button>
     </div>
-</div>
+  </div>
+
+  <div class="about-right">
+    <div id="bio" class="tab-content active">
+      <h1>About Me</h1>
+      <p>
+        I am currently pursuing a B.Tech in Computer Science and Engineering. I am well-versed in Data Structures and Algorithms using C++, Object-Oriented Programming, and Frontend Development.
+        <br><br>
+        I have elementary exposure to Machine Learning and am eager to deepen my understanding in the field.
+        <br><br>
+        Through my involvement in various university clubs, I’ve developed strong communication, organization, and problem-solving skills — as well as a passion for innovation.
+      </p>
+    </div>
+
+    <div id="certifications" class="tab-content">
+      <h1>Certifications</h1>
+      <ul>
+        <li><span>Tensorflow & Keras Bootcamp</span> – Udemy <a href="https://www.udemy.com/certificate/UC-fdc8d917-e8af-4d54-9a30-4b7022bb716b/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+        <li><span>Strategy & Game Theory</span> – IIM Ahmedabad (Coursera) <a href="https://coursera.org/share/ee1bf4ad4a3b42470517890ff1fde118"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+        <li><span>Business Analytics</span> – Univ. of Colorado (Coursera) <a href="https://coursera.org/share/7701511f091970c6721388d61a469e54"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+        <li><span>Data Structures & Algorithms</span> – Coding Ninjas <a href="https://certificate.codingninjas.com/view/08e6664753cdeb48"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+        <li><span>C++ Programming</span> – Coding Ninjas <a href="https://certificate.codingninjas.com/view/20987d9cbc5ddbe4"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+        <li><span>Digital Marketing</span> – LinkedIn Learning <a href="https://www.linkedin.com/learning/certificates/4aa3ab0d9418fe2807d70f9830a3f4c1bece08a15f4b33950402fba2ae18a9e4"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+        <li><span>C Language</span> – LinkedIn Learning <a href="https://www.linkedin.com/learning/certificates/c0142029b65a454f8a6eed7572bb530e9d00fca27acfe58d050771e18c094ba7"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+      </ul>
+    </div>
+
+    <div id="experience" class="tab-content">
+      <h1>Experience</h1>
+      <ul>
+        <li><span>AI/ML Intern</span> – Impetus</li>
+        <li><span>Social Media Team Lead</span> – KALLIOPE (Anchoring Society)</li>
+        <li><span>AI/ML Team Member</span> – E Labs</li>
+      </ul>
+    </div>
+
+    <div id="education" class="tab-content">
+      <h1>Education</h1>
+      <ul>
+        <li><span>2022–Present:</span> KIIT BBSR – B.Tech in CSE</li>
+        <li><span>2022:</span> Class XII (Science) – 85.6%</li>
+        <li><span>2020:</span> Class X – 93.2%</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script>
+  function showTab(tabId, button) {
+    const tabs = document.querySelectorAll(".tab-content");
+    const buttons = document.querySelectorAll(".tab-buttons button");
+
+    tabs.forEach(tab => tab.classList.remove("active"));
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    document.getElementById(tabId).classList.add("active");
+    button.classList.add("active");
+  }
+</script>
+
+</body>
+</html>
+
 
 <!------------skills---------->
+<title>Skills Carousel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+    }
 
-<div id = "skills">
-    <div class="container">
-        <h1 class="sub-title">Technical Skills</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-book"></i>
-                <h2>Concepts</h2>
-                <p>
-                Data Structures & Algorithms, OOPs, Computer Networks, DBMS, Operating System, Front-End development. <br><br> 100+ questions on Leetcode<br><br> 5 star @Hackerrank
-                </p>
-                 <a href="https://leetcode.com/u/Archit_12-3/">learn more</a>
-                
-            </div>            
-            
-            <div>
-                <i class="fa-solid fa-gears"></i>
-                <h2>Machine Learning</h2>
-                <p>
-                    <li>Computer Vision</li>
-                    <li>Data Mining</li> 
-                    <li>ML alg: SVM, Random Forest, Logistic regression, XGBoost etc.</li>                   
-                </p>
-                 <a href="#">learn more</a>
-                
-            </div>
-            <div>
-                <i class="fa-solid fa-computer"></i>
-                <h2>Deep Learning</h2>
-                <p>
-                    <li>NLP</li>
-                    <li>Auto-Encoders</li> 
-                    <li>Neural Networks: ANN, CNN, RNN</li>
-                </p>
-                <a href="#">learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-tools"></i>
-                <h2>Tools</h2>
-                <p>
-                     
-                        <li>TensorFlow</li>
-                        <li>OpenCV</li>
-                        <li>MediaPipe</li>
-                        <li>PiautoGUI</li>
-                        <li>Flask</li>
-                        <li>GitHub</li>
-                                       
-                    
-                    
-             
-                </p>
-                <a href="#">learn more</a>
-            </div>
-            <div>
-                <i class="fa-solid fa-globe"></i>
-                <h2>Languages</h2>
-                <p>
-                    <ul> 
-                        <li>C/C++</li>
-                        <li>Python</li>
-                        <li>C#</li>
-                        <li>Java Script</li>
-                        <li>HTML & CSS</li>
-                        <li>SQL</li>
-                        <li>MATLAB</li>                
-                    
-                    </ul>
-             
-                </p>
-                <a href="#">learn more</a>
-            </div>
-        </div>
+    .skills-section {
+      padding: 60px 30px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .section-title {
+      font-size: 40px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .carousel-wrapper {
+      display: flex;
+      animation: scroll-left 40s linear infinite;
+      width: fit-content;
+    }
+
+    .carousel {
+      display: flex;
+      gap: 30px;
+    }
+
+    .skill-card {
+      flex: 0 0 300px;
+      background: #212121;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: scale(1.05);
+    }
+
+    .skill-card h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .skill-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #ffd700;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .carousel-wrapper:hover {
+      animation-play-state: paused;
+      
+    }
+    .skill-card:hover{
+        background-color: #ff004f;
+        transition: background 0.5s,transform 0.5s;
+    }
+  </style>
+</head>
+<body>
+
+<div id = "skills" class="skills-section">
+  <h1 class="section-title">Technical Skills</h1>
+  <div class="carousel-wrapper">
+    <div class="carousel">
+      <!-- Skill Cards x 1 -->
+      <div class="skill-card">
+        <h2>🧠 Concepts</h2>
+        <p>DSA, OOP, OS, DBMS, CN, Front-End</p>
+        <p>100+ LeetCode Qs • 5★ HackerRank</p>
+        <a href="https://leetcode.com/u/Archit_12-3/" target="_blank">LeetCode ↗</a>
+      </div>
+      <div class="skill-card">
+        <h2>⚙️ Machine Learning</h2>
+        <p>CV, Data Mining</p>
+        <p>SVM, Random Forest, XGBoost, Logistic Regression</p>
+      </div>
+      <div class="skill-card">
+        <h2>🧠 Deep Learning</h2>
+        <p>ANN, CNN, RNN, NLP, Autoencoders</p>
+      </div>
+      <div class="skill-card">
+        <h2>🛠️ Tools & Frameworks</h2>
+        <p>TensorFlow, OpenCV, MediaPipe, Flask, PyAutoGUI, GitHub</p>
+      </div>
+      <div class="skill-card">
+        <h2>💻 Languages</h2>
+        <p>C/C++, Python, C#, JavaScript</p>
+        <p>HTML & CSS, SQL, MATLAB</p>
+      </div>
+
+      <!-- Duplicate the skill cards for seamless loop -->
+      <div class="skill-card">
+        <h2>🧠 Concepts</h2>
+        <p>DSA, OOP, OS, DBMS, CN, Front-End</p>
+        <p>100+ LeetCode Qs • 5★ HackerRank</p>
+        <a href="https://leetcode.com/u/Archit_12-3/" target="_blank">LeetCode ↗</a>
+      </div>
+      <div class="skill-card">
+        <h2>⚙️ Machine Learning</h2>
+        <p>CV, Data Mining</p>
+        <p>SVM, Random Forest, XGBoost, Logistic Regression</p>
+      </div>
+      <div class="skill-card">
+        <h2>🧠 Deep Learning</h2>
+        <p>ANN, CNN, RNN, NLP, Autoencoders</p>
+      </div>
+      <div class="skill-card">
+        <h2>🛠️ Tools & Frameworks</h2>
+        <p>TensorFlow, OpenCV, MediaPipe, Flask, PyAutoGUI, GitHub</p>
+      </div>
+      <div class="skill-card">
+        <h2>💻 Languages</h2>
+        <p>C/C++, Python, C#, JavaScript</p>
+        <p>HTML & CSS, SQL, MATLAB</p>
+      </div>
     </div>
+  </div>
 </div>
-<!-------------my project--
-<div id="project">
-    <div class="container">
-        <h1 class = "sub-title">My Projects</h1>
-        <div class ="work-list">
-            <div class="work">
-                <img src="img10.jpg">
-                <div class ="layer">
-                    <h3>NeuroWell</h3>
-                    <p>A diagnosis web app that uses CNN based ML models to predict Brain Tumor or Alzheimer's disease from MRI/CT scans.
-                    </p>
-                    <div class="links">
-                        <a href="https://github.com/architgh05/Human-detection-and-Acquisition">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://drive.google.com/drive/folders/1yHiIVaR-kDiRL3RXQOzarMixpRqiZbnL">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="work">
-                <img src="img10.jpg">
-                <div class ="layer">
-                    <h3>Target Detection and Acquisition</h3>
-                    <p>This prototype detects hand and face gestures through a laptop camera.
-                        It has a range of atleast 3 meters.
-                    </p>
-                    <div class="links">
-                        <a href="https://github.com/architgh05/Human-detection-and-Acquisition">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://drive.google.com/drive/folders/1yHiIVaR-kDiRL3RXQOzarMixpRqiZbnL">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="work">
-                <img src="img0,2.jpg">
-                <div class ="layer">
-                    <h3>Hand Cricket Game</h3>
-                    <p> Leveraging OpenCV for real-time video processing and a hand tracking module. Created a game where you can play cricket using hand gestures.
-                    </p>
-                    <div class = "links">
-                        <a href="https://github.com/architgh05/HAND_CRICKET_PROJECT"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://drive.google.com/drive/folders/1yRzFOQQnm54bf3c3A0t8oNFkyzje6S-g"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>                    
-                </div>
-            </div>
-            <div class="work">
-                <img src="cric222.jpg">
-                <div class ="layer">
-                    <h3>Cricket Central</h3>
-                    <p>This site provides up-to-date team rankings, cricket news updates and engaging media content.
-                    </p>
-                    <div class = "links">
-                        <a href="https://architgh05.github.io/CRICKET_CENTRAL/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        <a href="https://github.com/architgh05/CRICKET_CENTRAL"><i class="fa-brands fa-github"></i></a>
-                    </div>    
-                </div>
-            </div>  
-            <div class="work">
-                <img src="thumb2.jpg">
-                <div class ="layer">
-                    <h3>My Portfolio Website</h3>
-                    <p>A responsive portfolio website that you are using right now. Scripted using HTML,CSS and java script.
-                    </p>
-                    <a href="https://github.com/architgh05/portfolio-website"><i class="fa-brands fa-github"></i></a>
-                </div>
-            </div>            
-        </div>
-        <a href="#" class = "btn">See more</a>
-    </div>
-</div>
-<!----->
+
+
 <!-- Projects Section -->
 <section id="projects">
     <div class="container">
@@ -368,6 +525,9 @@
         padding: 50px 0;
     }
 
+    .sub-title {
+      font-size: 40px;
+    }
     .projects-filter {
         display: flex;
         gap: 1rem;
