@@ -58,7 +58,7 @@ nav ul li a:hover::after{
 }
 .header-text{
     margin-top: 30%;
-    font-size: 40px;
+    font-size: 40px;   
     
 }
 .header-text h1{
@@ -91,7 +91,7 @@ nav ul li a:hover::after{
 }
 
 .sub-title{
-    font-size: 60px;
+    font-size: 50px;
     font-weight : 600;
     color: #fff;
 }
@@ -178,6 +178,8 @@ nav ul li a:hover::after{
     margin-top: 20px;
     display: inline-block;
 }
+
+
 .services-list div:hover{
     background: #ff004f;
     transform: translateY(-10px);
